@@ -1,0 +1,31 @@
+header {
+  background: url(../img/bg/bg-900x500.jpg) no-repeat center/ cover;
+  color: #fff;
+  text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
+  color: #fff;
+  text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
+  height: 400px;
+  height: 500px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+
+  li {
+    margin-left: 40px;
+
+    a {
+      font-size: 1.3em;
+      color: #FFF;
+      text-shadow: 1px 1px #000, 1px -1px #000, -1px 1px #000, -1px -1px #000;
+    }
+  }
+}
+
+
+.sass_check {
+  p {
+    background-color: #ccc;
+  }
+}
