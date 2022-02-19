@@ -20,6 +20,7 @@ const htmlPluginConfig = globule
       template: `./src/${filename}`,
       scriptLoading: 'blocking',
       inject: 'body',
+      publicPath: '/',
     });
   });
 
@@ -47,9 +48,9 @@ module.exports = {
   },
   output: {
     path: opts.destDir,
-    filename: 'js/[name].js',
-    assetModuleFilename: 'img/[name][hash][ext]',
-    publicPath: 'auto',
+    filename: 'assets/js/[name].js',
+    assetModuleFilename: 'assets/img/[name][hash][ext]',
+    publicPath: '/',
     clean: true,
   },
   module: {
