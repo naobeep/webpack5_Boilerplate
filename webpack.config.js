@@ -20,7 +20,6 @@ const htmlPluginConfig = globule
       template: `./src/${filename}`,
       scriptLoading: 'blocking',
       inject: 'body',
-      publicPath: '/',
     });
   });
 
@@ -48,8 +47,9 @@ module.exports = {
   },
   output: {
     path: opts.destDir,
-    filename: 'assets/js/[name].js',
-    assetModuleFilename: 'assets/img/[name][hash][ext]',
+    filename: 'js/[name].js',
+    assetModuleFilename: 'img/[hash][ext]',
+    //publicPath: 'auto',
     publicPath: '/',
     clean: true,
   },
@@ -84,9 +84,9 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '/',
-            },
+            // options: {
+            //   publicPath: '/',
+            // },
           },
           'css-loader', //cssの読み込み
           {
