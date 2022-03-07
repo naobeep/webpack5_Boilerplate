@@ -48,9 +48,9 @@ module.exports = {
   output: {
     path: opts.destDir,
     filename: 'js/[name].js',
-    assetModuleFilename: 'img/[hash][ext]',
-    //publicPath: 'auto',
-    publicPath: '/',
+    // assetModuleFilename: 'img/[hash][ext]',
+    publicPath: 'auto',
+    // publicPath: '/',
     clean: true,
   },
   module: {
@@ -84,9 +84,9 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   publicPath: '/',
-            // },
+            options: {
+              publicPath: '../',
+            },
           },
           'css-loader', //cssの読み込み
           {
@@ -114,6 +114,11 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: '[name][ext]',
+          publicPath: 'assets/img',
+          outputPath: 'assets/img/'
+        }
       },
       {
         test: /\.(jpe?g|png|webp|avif)$/i,
