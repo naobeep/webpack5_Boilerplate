@@ -47,8 +47,8 @@ module.exports = {
   },
   output: {
     path: opts.destDir,
-    filename: 'js/[name].js',
-    assetModuleFilename: 'img/[hash][ext]',
+    filename: 'common/js/[name].js',
+    assetModuleFilename: 'assets/img/[hash][ext]',
     // publicPath: 'auto',
     publicPath: '/',
     clean: true,
@@ -58,26 +58,7 @@ module.exports = {
       {
         test: /\.(ts|js)$/i,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    // modules: false,
-                    useBuiltIns: 'usage',
-                    corejs: 3,
-                  },
-                ],
-              ],
-            },
-          },
-          {
-            loader: 'ts-loader',
-          },
-        ],
+        use: 'ts-loader',
       },
       {
         test: /\.s?css$/i,
@@ -114,11 +95,6 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: 'asset/resource',
-        // generator: {
-        //   filename: '[name][ext]',
-        //   publicPath: 'assets/img',
-        //   outputPath: 'assets/img/'
-        // }
       },
       {
         test: /\.(jpe?g|png|webp|avif)$/i,
@@ -180,7 +156,7 @@ module.exports = {
     }),
     new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/[name]',
+      filename: 'common/css/[name]',
     }),
   ],
   optimization: {
@@ -194,5 +170,5 @@ module.exports = {
       }),
     ],
   },
-  target: ['web', 'es5'],
+  target: ['web', 'es6'],
 };
