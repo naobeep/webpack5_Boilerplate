@@ -18,7 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "@squoosh/lib": "^0.4.1",
-    "autoprefixer": "^10.4.9",
+    "autoprefixer": "^10.4.10",
     "babel-loader": "^8.2.5",
     "beautify-html-webpack-plugin": "^1.0.3",
     "browserslist": "^4.21.3",
