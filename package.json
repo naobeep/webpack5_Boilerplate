@@ -19,7 +19,7 @@
   "devDependencies": {
     "@squoosh/lib": "^0.4.1",
     "autoprefixer": "^10.4.13",
-    "babel-loader": "^9.0.1",
+    "babel-loader": "^9.1.0",
     "beautify-html-webpack-plugin": "^1.0.3",
     "browserslist": "^4.21.4",
     "css-declaration-sorter": "^6.3.1",
