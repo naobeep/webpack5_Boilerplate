@@ -30,7 +30,7 @@
     "html-webpack-plugin": "^5.5.0",
     "image-minimizer-webpack-plugin": "^3.8.1",
     "license-checker": "^25.0.1",
-    "mini-css-extract-plugin": "^2.6.1",
+    "mini-css-extract-plugin": "^2.7.0",
     "npm-check-updates": "^16.4.1",
     "postcss": "^8.4.19",
     "postcss-loader": "^7.0.1",
