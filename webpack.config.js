@@ -48,7 +48,8 @@ module.exports = {
   output: {
     path: opts.destDir,
     filename: 'common/js/[name].js',
-    assetModuleFilename: 'assets/img/[hash][ext]',
+    // assetModuleFilename: 'assets/img/[hash][ext]',
+    assetModuleFilename: 'assets/img/[name][ext]',
     // publicPath: 'auto',
     publicPath: '/',
     clean: true,
@@ -93,35 +94,36 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp)$/i,
-        type: 'asset/resource',
+        test: /\.(jpe?g|png|gif|svg|webp|avif|tiff)$/i,
+        // type: 'asset/resource',
+        type: 'asset',
       },
-      {
-        test: /\.(jpe?g|png|webp|avif)$/i,
-        loader: ImageMinimizerPlugin.loader, //  squooshによる画像圧縮の設定
-        enforce: 'pre',
-        options: {
-          minimizer: {
-            implementation: ImageMinimizerPlugin.squooshMinify,
-            options: {
-              encodeOptions: {
-                mozjpeg: {
-                  quality: 75,
-                },
-                oxipng: {
-                  effort: 2,
-                },
-                webp: {
-                  lossless: 1,
-                },
-                avif: {
-                  cqLevel: 0,
-                },
-              },
-            },
-          },
-        },
-      },
+      // {
+      //   test: /\.(jpe?g|png|webp|avif)$/i,
+      //   loader: ImageMinimizerPlugin.loader, //  squooshによる画像圧縮の設定
+      //   enforce: 'pre',
+      //   options: {
+      //     minimizer: {
+      //       implementation: ImageMinimizerPlugin.squooshMinify,
+      //       options: {
+      //         encodeOptions: {
+      //           mozjpeg: {
+      //             quality: 75,
+      //           },
+      //           oxipng: {
+      //             effort: 2,
+      //           },
+      //           webp: {
+      //             lossless: 1,
+      //           },
+      //           avif: {
+      //             cqLevel: 0,
+      //           },
+      //         },
+      //       },
+      //     },
+      //   },
+      // },
       {
         test: /\.html$/i,
         use: [
@@ -165,6 +167,34 @@ module.exports = {
         terserOptions: {
           compress: {
             drop_console: true,
+          },
+        },
+      }),
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.sharpMinify,
+          options: {
+            encodeOptions: {
+              jpeg: {
+                quality: 50,
+              },
+              webp: {
+                quality: 50,
+                // lossless: true,
+              },
+              avif: {
+                quality: 50,
+                // lossless: true,
+              },
+              png: {
+                effort: 7,
+              },
+              gif: {},
+              tiff: {
+                quality: 50,
+              },
+              // toFormat: 'webp'
+            },
           },
         },
       }),
