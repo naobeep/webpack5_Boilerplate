@@ -146,15 +146,16 @@ module.exports = {
       }),
       new ImageMinimizerPlugin({
         minimizer: {
+          filename: '[path][name].webp',
           implementation: ImageMinimizerPlugin.sharpMinify,
           options: {
             encodeOptions: {
-              jpeg: {
-                quality: 50,
-              },
               webp: {
                 quality: 50,
                 // lossless: true,
+              },
+              jpeg: {
+                quality: 50,
               },
               avif: {
                 quality: 50,
@@ -167,7 +168,6 @@ module.exports = {
               tiff: {
                 quality: 50,
               },
-              // toFormat: 'webp'
             },
           },
         },
