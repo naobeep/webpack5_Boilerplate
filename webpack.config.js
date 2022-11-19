@@ -98,32 +98,6 @@ module.exports = {
         // type: 'asset/resource',
         type: 'asset',
       },
-      // {
-      //   test: /\.(jpe?g|png|webp|avif)$/i,
-      //   loader: ImageMinimizerPlugin.loader, //  squooshによる画像圧縮の設定
-      //   enforce: 'pre',
-      //   options: {
-      //     minimizer: {
-      //       implementation: ImageMinimizerPlugin.squooshMinify,
-      //       options: {
-      //         encodeOptions: {
-      //           mozjpeg: {
-      //             quality: 75,
-      //           },
-      //           oxipng: {
-      //             effort: 2,
-      //           },
-      //           webp: {
-      //             lossless: 1,
-      //           },
-      //           avif: {
-      //             cqLevel: 0,
-      //           },
-      //         },
-      //       },
-      //     },
-      //   },
-      // },
       {
         test: /\.html$/i,
         use: [
