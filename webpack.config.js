@@ -146,7 +146,7 @@ module.exports = {
       }),
       new ImageMinimizerPlugin({
         minimizer: {
-          filename: '[path][name].webp',
+          // filename: '[path][name].webp',
           implementation: ImageMinimizerPlugin.sharpMinify,
           options: {
             encodeOptions: {
