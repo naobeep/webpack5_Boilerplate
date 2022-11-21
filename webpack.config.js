@@ -155,7 +155,8 @@ module.exports = {
                 // lossless: true,
               },
               jpeg: {
-                quality: 50,
+                quality: 75,
+                mozjpeg: true,
               },
               avif: {
                 quality: 50,
