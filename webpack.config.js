@@ -151,8 +151,9 @@ module.exports = {
           options: {
             encodeOptions: {
               webp: {
-                quality: 50,
+                quality: 75,
                 // lossless: true,
+                nearLossless: true,
               },
               jpeg: {
                 quality: 75,
