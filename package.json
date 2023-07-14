@@ -37,7 +37,7 @@
     "rimraf": "^5.0.1",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
-    "sharp": "^0.32.2",
+    "sharp": "^0.32.3",
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
     "webpack": "^5.88.1",
