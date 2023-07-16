@@ -31,7 +31,7 @@
     "image-minimizer-webpack-plugin": "^3.8.3",
     "license-checker": "^25.0.1",
     "mini-css-extract-plugin": "^2.7.6",
-    "npm-check-updates": "^16.10.15",
+    "npm-check-updates": "^16.10.16",
     "postcss": "^8.4.26",
     "postcss-loader": "^7.3.3",
     "rimraf": "^5.0.1",
