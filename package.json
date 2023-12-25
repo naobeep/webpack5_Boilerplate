@@ -36,7 +36,7 @@
     "postcss-loader": "^7.3.3",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
-    "sass-loader": "^13.3.2",
+    "sass-loader": "^13.3.3",
     "sharp": "^0.33.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
